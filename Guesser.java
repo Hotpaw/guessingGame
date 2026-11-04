@@ -7,19 +7,18 @@ public class Guesser {
     private int high;
     private Scanner scanner = new Scanner(System.in);
 
-    // Steg 1 - Konstruktor
+   
     public Guesser(int low, int high) {
         this.low = low;
         this.high = high;
     }
 
-    // Steg 2 - Starta spelet
     public void start() {
         rules();
         doGuesses();
     }
 
-    // Visa reglerna
+   
     private void rules() {
         System.out.println("Think of a number between " + low + " and " + high);
         System.out.println("I'm going to ask a few questions in order to guess the number.");
@@ -27,7 +26,7 @@ public class Guesser {
         System.out.println();
     }
 
-    // Steg 3 - Las spelarens svar
+  
     private String getReply() {
         String reply = scanner.nextLine();
 
@@ -39,7 +38,7 @@ public class Guesser {
         return reply;
     }
 
-    // Gissa talet
+   
     private void doGuesses() {
         int guesses = 0;
 
@@ -62,7 +61,6 @@ public class Guesser {
         answer(low, guesses);
     }
 
-    // Visa resultatet
     private void answer(int guess, int numberOfGuesses) {
         System.out.println("You were thinking about " + guess +
                 " (took me " + numberOfGuesses + " guesses)");
